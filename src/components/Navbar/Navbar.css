@@ -1,0 +1,35 @@
+
+.navbarContainer {
+  width: 100vw;
+  /* background-color: rgb(249, 249, 249); */
+  z-index: 99;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbarContainer.active{
+
+  backdrop-filter: blur(25px);
+  top: 0px;
+  position: fixed;
+}
+.navLeft {
+  cursor: pointer;
+}
+.navLeft img{
+  width: 150px;
+  height: 80px;
+}
+.navRight ul {
+  cursor: pointer;
+  display: flex;
+  gap: 30px;
+}
+.navRight ul li {
+    font-weight: 300;
+  list-style-type: none;
+}
+.navRight ul li:hover{
+  color: gray;
+}

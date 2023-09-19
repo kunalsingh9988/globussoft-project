@@ -1,0 +1,70 @@
+.main {
+
+  width: 100vw;
+  padding-bottom: 200px;
+  background-image: linear-gradient(
+    173.1deg,
+    rgba(226, 66, 249, 0.94) 10.2%,
+    rgba(79, 147, 249, 1) 77.3%
+  );
+}
+.boxContainer {
+  margin: -400px 100px 0 100px;
+}
+.whiteBox {
+  background-color: white;
+  z-index: 2;
+  transform: rotate(-33deg);
+  position: relative;
+  bottom: 230px;
+  left: 60px;
+  width: 150px;
+  height: 80px;
+}
+.boxContainer h1 {
+  color: #00bfff;
+  line-height: 1;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.boxContainer h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+.mainBox {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(176, 229, 208, 1) 42%,
+    rgba(92, 202, 238, 0.41) 93.6%
+  );
+  position: relative;
+}
+.mainBox p {
+  margin-top: 40px;
+  width: 40vw;
+}
+.rightMainBox {
+  border-radius: 5px 5px 100px 5px;
+  color: white;
+  position: absolute;
+  padding: 20px;
+  right: -40px;
+  background-image: linear-gradient(
+    270.3deg,
+    rgba(84, 212, 228, 1) 0.2%,
+    rgba(68, 36, 164, 1) 100%
+  );
+  width: 40vw;
+  height: 55vh;
+}
+.wave {
+  position: relative;
+  top: 210px;
+}

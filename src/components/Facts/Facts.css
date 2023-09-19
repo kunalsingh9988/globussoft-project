@@ -1,0 +1,30 @@
+.factsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.factsContainer h3{
+  font-size: 50px;
+  font-weight: 300;
+  color: #00bfff;
+}
+.factsContainer h4{
+  font-weight: 300;
+}
+.singleFactsContainer {
+  margin-top: 70px;
+  display: flex;
+  gap: 150px;
+}
+.fact {
+  width: 50px;
+}
+.fact h2{
+  color: #0095c7;
+  font-size: 30px;
+  font-weight: 800;
+}
+.fact p{
+  width: 50px;
+}
