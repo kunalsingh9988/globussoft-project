@@ -16,16 +16,16 @@ const Client = () => {
     );
   };
   return (
-    <div id="client">
+    <div id="client" >
       <h1>Meet Our Clients</h1>
  
 
-      <div className="carousel-container">
+      <div className="carousel-container"  data-aos="fade-up">
         <div className="carouselClient">
           <button onClick={prevSlide} className="arrow-button prev">
              <AiOutlineArrowLeft/>
           </button>
-          <div className="carousel">
+          <div className="carousel" >
             {ClientData.map((client, index) => (
               <div
                 key={client.id}
@@ -35,9 +35,10 @@ const Client = () => {
                   className="clientImg"
                   src={client.image}
                   alt={client.title}
+                  
                 />
                 <h2>{client.title}</h2>
-                <p>{client.description}</p>
+                <p >{client.description}</p>
                 <h3>{client.name}</h3>
               </div>
             ))}

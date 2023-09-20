@@ -8,7 +8,7 @@ const Main = () => {
         <h1>Technology You Can Trust</h1>
         <h2>Providing virtual solutions to help people flourish</h2>
         <div className="mainBox">
-          <p>
+          <p data-aos="fade-up-right">
             Globussoft enables corporations and organizations to directly
             address the necessity of becoming fast, dependable, and innovative.
             We help you transform businesses with our extensive range of
@@ -17,7 +17,7 @@ const Main = () => {
             services, we aim at introducing cutting edge technology to help
             enterprises leverage their capabilities.
           </p>
-          <p>
+          <p data-aos="fade-up-right">
             We are CMM – Level 3, Nasscom Certified, ISO 9001-2015 Certified,
             Microsoft Gold Certified Software Products Company. Our humongous
             experience of over a decade and technical expertise keeps us a
@@ -28,7 +28,7 @@ const Main = () => {
             player globally. Give your dreams a pair of wings, and get ready to
             fly with us.
           </p>
-          <div className="rightMainBox">
+          <div className="rightMainBox" data-aos="fade-up-left">
             Globussoft enables corporations and organizations to directly
             address the necessity of becoming fast, dependable, and innovative.
             We help you transform businesses with our extensive range of

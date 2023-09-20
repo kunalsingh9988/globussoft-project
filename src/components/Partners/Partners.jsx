@@ -5,7 +5,7 @@ import {BsMicrosoft} from 'react-icons/bs'
 
 const Partners = () => {
   return (
-    <div className='partners'>
+    <div className='partners' data-aos="zoom-out-right">
         <div className="partnersContainer">
             <h2>Our Partners In Business</h2>
             <p>Our partners are our treasured assets and the life- force behind our corporation, who have been with us through our decade of excellence by virtue of our commitment and passion.</p>

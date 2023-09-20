@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="hero" >
       <div className="heroContainer">
         <section className="leftHero">
           <h1>Expanding Possibilities For The Next Generation</h1>

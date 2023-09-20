@@ -3,7 +3,9 @@ import "./CardSection.css";
 import { CardData } from "../../CardData";
 const CardSection = () => {
   return (
-    <div className="cardSection">
+    <div className="cardSection" data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000">
       <div className="cardContainer">
         <div className="topCardText">
           <h2>We Care Enough To</h2>
