@@ -1,10 +1,48 @@
+/* importing poppins font from google fonts  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
+/* setting global styles to minimise potential bugs and repetetion */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  /* background-color: #141E46; */
+ 
+}
+/* setting every anchor tag underline to none */
+a{
+  text-decoration: none;
+}
+/* setting every unordered list style to none */
+ul{
+  list-style-type: none;
+}
+/* setting width and height of every image to 100% so that it wouldn't overflow it's parent div  */
+img{
+  width: 100%;
+  height: 100%;
+}
 
+ /*-------- scrollbar styling ---------*/
+ /* Track */
+
+
+ ::-webkit-scrollbar {
+   width: 8px; /* Width of the vertical scrollbar */
+   height: 18px; /* Height of the horizontal scrollbar */
+ }
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: #00ADB5; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222831; /* Color of the track */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a9fbff; /* Color on hover */
 }

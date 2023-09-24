@@ -1,35 +1,48 @@
+/* Base Styles */
+
+/* Styling for the client section */
+#client {
+  background-color: #222831;
+  text-align: center;
+  padding: 100px 0;
+  background-image: url('/public/assets/shapes.svg');
+}
+
+/* Styling for the heading within the client section */
+#client h1 {
+  color: #EEEEEE;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Styling for the carousel container */
 .carousel-container {
-  margin: 100px 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 50px 0;
   position: relative;
 }
+
+/* Styling for the carousel client container */
 .carouselClient {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(97, 186, 255, 1) 0%,
-    rgba(166, 239, 253, 1) 90.1%
-  );
+  background-color: #71C9CE;
 }
+
+/* Styling for the carousel itself */
 .carousel {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  width: 90%;
+  max-width: 90%; /* Adjust for responsiveness */
   width: 500px;
   height: 600px;
   position: relative;
   padding: 20px 0;
-}
-#client h1 {
-  color: #00bfff;
-
-  font-size: 60px;
-  font-weight: 600;
-  text-align: center;
+  margin: 0 auto;
 }
 
+/* Styling for individual slides */
 .slide {
   display: none;
   flex-direction: column;
@@ -37,47 +50,125 @@
   text-align: center;
   padding: 20px;
 }
-.slide h2,
-p,
-h3 {
-  margin-top: 20px;
-}
+
+/* Styling for heading within slides */
 .slide h2 {
   color: white;
-  margin-top: 40px;
-  font-size: 35px;
-}
-.slide p {
-  width: 350px;
+  font-size: 1.75rem;
+  margin-top: 20px;
 }
 
+/* Styling for subheading within slides */
+.slide h3 {
+  margin-top: 30px;
+}
+
+/* Styling for paragraphs within slides */
+.slide p {
+  width: 80%;
+  max-width: 350px;
+  margin-top: 20px;
+}
+
+/* Styling for client images within slides */
 .slide img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
 }
 
+/* Styling for active slide */
 .active {
   display: flex;
 }
 
+/* Styling for navigation arrows */
 .arrow-button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: #EEEEEE;
   background: none;
   border: none;
   cursor: pointer;
-  color: black;
-  font-size: 50px;
+  font-size: 3rem;
 }
 
+/* Styling for previous arrow */
 .prev {
   left: 100px;
 }
 
+/* Styling for next arrow */
 .next {
   right: 100px;
+}
+
+/* Media Queries */
+
+/* Media query for screens up to 768px width */
+@media screen and (max-width: 768px) {
+  /* Adjust carousel width for smaller screens */
+  .carousel {
+    max-width: 95%;
+    width: 90%;
+  }
+
+  /* Adjust heading size within slides */
+  .slide h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust positioning of previous arrow */
+  .prev {
+    z-index: 2;
+    top: 120px;
+    left: 100px;
+  }
+
+  /* Adjust positioning of next arrow */
+  .next {
+    top: 120px;
+    right: 100px;
+  }
+
+  /* Adjust paragraph width within slides */
+  .slide p {
+    max-width: 90%;
+  }
+}
+
+/* Media query for screens up to 500px width */
+@media screen and (max-width: 500px) {
+  /* Adjust carousel width for smaller screens */
+  .carousel {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Adjust heading size within slides */
+  .slide h2 {
+    font-size: 1.25rem;
+  }
+
+  /* Adjust positioning and size of navigation arrows */
+  .arrow-button {
+    top: 20%;
+    font-size: 2rem;
+  }
+
+  /* Adjust positioning of previous arrow */
+  .prev {
+    z-index: 2;
+    left: 30px;
+  }
+
+  /* Adjust positioning of next arrow */
+  .next {
+    right: 30px;
+  }
+
+  /* Adjust paragraph width within slides */
+  .slide p {
+    max-width: 95%;
+  }
 }

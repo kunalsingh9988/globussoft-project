@@ -1,29 +1,85 @@
-.partnersContainer{
-    margin: 120px 50px;
-    text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Base Styles for the Partners Section */
+#partners {
+    background-color: #222831; /* Set background color */
+    background-image: url('/public/assets/shapes.svg'); /* Add background image */
+  }
   
-}
-.partnersContainer h2, p{
-    width: 70vw;
-}
-.partnersContainer h2{
-  color: #00bfff;
-   font-weight: 500;
-    font-size: 50px;
-}
-.partnersContainer p{
-    color: rgb(171, 171, 171);
-}
-.companyIcons{
-    margin-top: 80px;
-    display: flex;
-    gap: 110px;
-}
-.companyIcon{
-    color: rgb(171, 171, 171);
-    height: 100px;
-    width: 100px;
-}
+  /* Container for Partners Content */
+  .partnersContainer {
+    padding: 40px 20px; /* Add padding for spacing */
+    text-align: center; /* Center-align text */
+    display: flex; /* Use flex display */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align child elements */
+    padding: 20px; /* Additional padding for spacing */
+  }
+  
+  /* Header for Partners Section */
+  .partnersContainer h2,
+  .partnersContainer p {
+    width: 90%; /* Set maximum width for better responsiveness */
+    max-width: 600px; /* Limit text width on larger screens */
+  }
+  
+  /* Partners Section Header */
+  .partnersContainer h2 {
+    color: #00bfff; /* Set text color */
+    font-weight: 500; /* Set font weight */
+    font-size: 2rem; /* Set font size for readability */
+    margin-top: 20px; /* Adjust top margin for spacing */
+  }
+  
+  /* Partners Section Description */
+  .partnersContainer p {
+    color: rgb(171, 171, 171); /* Set text color */
+    font-size: 1rem; /* Set font size for readability */
+    margin-top: 10px; /* Adjust top margin for spacing */
+  }
+  
+  /* Company Icons Container */
+  .companyIcons {
+    margin-top: 40px; /* Adjust top margin for spacing */
+    display: flex; /* Use flex display */
+    flex-wrap: wrap; /* Allow wrapping of child elements for responsiveness */
+    justify-content: center; /* Center-align child elements horizontally */
+    gap: 20px; /* Add gap between child elements */
+  }
+  
+  /* Company Icon Styles */
+  .companyIcon {
+    color: rgb(171, 171, 171); /* Set icon color */
+    font-size: 2rem; /* Set font size for visibility */
+    margin: 10px; /* Add margin around icons for spacing */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media screen and (max-width: 768px) {
+    /* Adjust styles for tablet-sized screens */
+    .partnersContainer h2 {
+      font-size: 1.5rem; /* Decrease font size for tablet */
+    }
+  
+    .partnersContainer p {
+      font-size: 0.9rem; /* Decrease font size for tablet */
+    }
+  
+    .companyIcon {
+      font-size: 2rem; /* Maintain font size for tablet */
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    /* Adjust styles for mobile-sized screens */
+    .partnersContainer h2 {
+      font-size: 1.2rem; /* Decrease font size for mobile */
+    }
+  
+    .partnersContainer p {
+      font-size: 0.8rem; /* Decrease font size for mobile */
+    }
+  
+    .companyIcon {
+      font-size: 1.5rem; /* Maintain font size for mobile */
+    }
+  }
+  

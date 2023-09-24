@@ -1,0 +1,111 @@
+/* Base Styles for the Progress Section */
+#progress {
+    background-color: #222831; /* Set background color */
+    padding-top: 5%; /* Add padding to the top */
+    background-image: url('/public/assets/shapes.svg'); /* Add background image */
+  }
+  
+  /* Container for Progress Content */
+  .progressContainer {
+    text-align: start; /* Align text to the left */
+    padding: 0 7%; /* Add horizontal padding */
+  }
+  
+  /* Header for Progress Section */
+  .progressHeader {
+    margin: 3% 0; /* Add margin to the top and bottom */
+  }
+  
+  .progressHeader h1 {
+    color: #00ADB5; /* Set text color */
+    font-size: 2rem; /* Increase font size for better readability */
+  }
+  
+  .progressHeader p {
+    color: #EEEEEE; /* Set text color */
+  }
+  
+  /* Main Progress Section */
+  .progress-main {
+    display: flex; /* Use flex display */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Add space between items */
+    min-height: 60vh; /* Set minimum height */
+  }
+  
+  /* Circular Progress Bar Styles */
+  .circular-progress-bar {
+    display: flex; /* Use flex display */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items horizontally */
+    text-align: center; /* Center-align text */
+    width: 45%; /* Set width for better spacing */
+    max-width: 250px; /* Limit maximum width */
+    height: auto; /* Allow height to adjust based on content */
+    margin: 2vw 0; /* Add margin for spacing */
+  }
+  
+  .circular-progress-bar h1 {
+    color: #00ADB5; /* Set text color */
+    margin-top: 1rem; /* Add margin to the top */
+    font-size: 1.2rem; /* Increase font size for better readability */
+    font-weight: 600; /* Set font weight */
+  }
+  
+  .circular-progress-bar p {
+    width: 14vw; /* Set width for better spacing */
+    font-size: 10px; /* Set font size */
+    color: #a3a3a3; /* Set text color */
+    margin-top: 0.5rem; /* Add margin to the top */
+  }
+  
+  /* Media queries for tablet screens */
+  @media (max-width: 768px) {
+    .progressContainer {
+      text-align: center; /* Center-align text */
+      margin: 8vw 0 4vw 0; /* Adjust margins */
+    }
+  
+    .progressHeader {
+      max-width: 90vw; /* Limit maximum width */
+    }
+  
+    .circular-progress-bar {
+      width: 90%; /* Set width for smaller screens */
+      max-width: 100%; /* Remove maximum width restriction */
+    }
+  }
+  
+  /* Circular Progress Bar Styles for mobile screens */
+  .progressbar {
+    width: 150px; /* Set width for circular progress bars */
+    height: 150px; /* Set height for circular progress bars */
+  }
+  
+  @media (max-width: 576px) {
+    .progress-main {
+      margin-top: 30px; /* Adjust margin for spacing */
+      text-align: center; /* Center-align text */
+      display: flex; /* Use flex display */
+      justify-content: center; /* Center-align content horizontally */
+    }
+  
+    .progressContainer {
+      margin: 0 0 0 0; /* Adjust margin for smaller screens */
+    }
+  
+    .progressHeader h1 {
+      font-size: 1.5rem; /* Decrease font size for mobile */
+    }
+  
+    .circular-progress-bar h1 {
+      font-size: 1rem; /* Decrease font size for mobile */
+    }
+  
+    .circular-progress-bar p {
+      width: 80%; /* Set width for better spacing */
+      font-size: 0.9rem; /* Decrease font size for mobile */
+    }
+  }
+  

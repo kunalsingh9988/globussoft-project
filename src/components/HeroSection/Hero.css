@@ -1,60 +1,113 @@
-.heroContainer {
+/* Base Styles for Hero Section */
+#hero {
+  background-color: #222831;
+  max-width: 100vw;
+  padding: 5% 0;
+  background-image: url('/public/assets/floating.svg');
+}
 
-  margin: 5%;
+/* Container for Hero Content */
+.heroContainer {
+  padding: 0 5%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
-#visual{
-  position: relative;
-  top: -460px;
-  z-index: -1;
-}
+
+/* Left Side of Hero Section */
 .leftHero {
- 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
   width: 40vw;
-
-
 }
+
+/* Heading Styles */
 .leftHero h1 {
+  z-index: 3;
   line-height: 1.3;
   text-align: center;
   font-size: 50px;
   font-weight: 800;
-  background: linear-gradient(135deg, #08AEEA, #2AF598, #FF7C6A, #FFB700, #D9D9D9);
+
+  /* Background Gradient Animation */
+  background: linear-gradient(
+    to bottom,
+    #0D7377,
+    #14FFEC,
+    #ffffff
+  );
+  background-clip: padding-box;
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  /* Text Movement Animation */
   animation: move 3s infinite ease alternate;
 }
+
 @keyframes move {
   from {
     transform: translateY(-20px);
   }
-  to{
+  to {
     transform: translateY(px) scale(1.03);
-
   }
 }
 
+/* Paragraph Styles */
 .leftHero p {
-  animation: move 3s infinite ease alternate;
-   width: 40vw;
+  width: 30vw;
   margin-top: 20px;
   font-weight: 300;
   line-height: 1.2;
-  color: rgb(126, 126, 126);
+  color: #a3a3a3;
   text-align: center;
+
+  /* Text Movement Animation */
+  animation: move 3s infinite ease alternate;
 }
+
+/* Right Side of Hero Section */
 .rightHero {
   width: 40vw;
-}
-.rightHero img {
-
-
-  box-shadow: 5px 5px 25px rgb(186, 186, 186);
-  float: right;
-  width: 500px;
   height: 300px;
+  position: relative;
+}
+
+/* Image Styles */
+.rightHero img {
+  filter: brightness(75%);
+}
+
+/* Media Queries */
+@media screen and (max-width: 576px) {
+  /* Adjust layout for smaller screens */
+  .heroContainer {
+    flex-direction: column;
+  }
+
+  .leftHero {
+    width: 9cm;
+  }
+
+  /* Adjust font size for headings and paragraphs */
+  .leftHero h1 {
+    font-size: 28px;
+  }
+
+  .leftHero p {
+    width: 70vw;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  /* Adjust size for the right side */
+  .rightHero {
+    margin-top: 30px;
+    width: 90vw;
+    height: 200px;
+  }
 }

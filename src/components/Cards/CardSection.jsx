@@ -1,13 +1,12 @@
 import React from "react";
-import "./CardSection.css";
-import { CardData } from "../../CardData";
+import "./CardSection.css"; // Importing CSS for this component
+import { CardData } from "../../CardData"; // Importing CardData 
+
 const CardSection = () => {
   return (
-    <div className="cardSection" data-aos="flip-left"
-    data-aos-easing="ease-out-cubic"
-    data-aos-duration="2000">
+    <div className="cardSection">
       <div className="cardContainer">
-        <div className="topCardText">
+        <div className="topCardText" data-aos="fade-up">
           <h2>We Care Enough To</h2>
           <h3>Deliver Our Best</h3>
           <p>
@@ -17,6 +16,7 @@ const CardSection = () => {
           </p>
         </div>
         <div className="cards">
+          {/* mapping through the card data  */}
           {CardData.map((card) => {
             return (
               <div className="card" key={card.id}>

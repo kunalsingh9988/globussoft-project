@@ -1,70 +1,102 @@
+/* Base Styles for Main Section */
 .main {
-
-  width: 100vw;
-  padding-bottom: 200px;
-  background-image: linear-gradient(
-    173.1deg,
-    rgba(226, 66, 249, 0.94) 10.2%,
-    rgba(79, 147, 249, 1) 77.3%
-  );
-}
-.boxContainer {
-  margin: -400px 100px 0 100px;
-}
-.whiteBox {
-  background-color: white;
-  z-index: 2;
-  transform: rotate(-33deg);
-  position: relative;
-  bottom: 230px;
-  left: 60px;
-  width: 150px;
-  height: 80px;
-}
-.boxContainer h1 {
-  color: #00bfff;
-  line-height: 1;
+  /* Spacing and Background */
+  padding: 100px 0;
+  max-width: 100%;
+  padding: 50px 0;
+  background-image: url('/public/assets/shapes.svg');
+  background-color: #222831;
   text-align: center;
+}
+
+/* Container for Content Boxes */
+.boxContainer {
+  margin: 0 auto;
+  max-width: 800px;
+  position: relative;
+}
+
+/* Main Heading Styles */
+.boxContainer h1 {
+  color: #EEEEEE;
   font-size: 40px;
   font-weight: 500;
+  margin: 20px 0 -2px 0;
+}
+
+/* Subheading Styles */
+.boxContainer h2 {
+  color: #a3a3a3;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Main Content Box Styles */
+.mainBox {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #00ADB5;
+  border-radius: 5px;
+}
+
+/* Paragraph Styles within Main Box */
+.mainBox p {
+  margin-top: 20px;
+  max-width: 60%;
+  text-align: start;
+  font-size: 18px;
   line-height: 1.5;
 }
-.boxContainer h2 {
-  margin-bottom: 30px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 400;
-}
-.mainBox {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 30px;
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(176, 229, 208, 1) 42%,
-    rgba(92, 202, 238, 0.41) 93.6%
-  );
-  position: relative;
-}
-.mainBox p {
-  margin-top: 40px;
-  width: 40vw;
-}
+
+/* Right-side Content Box Styles */
 .rightMainBox {
-  border-radius: 5px 5px 100px 5px;
-  color: white;
+  color: black;
   position: absolute;
   padding: 20px;
-  right: -40px;
-  background-image: linear-gradient(
-    270.3deg,
-    rgba(84, 212, 228, 1) 0.2%,
-    rgba(68, 36, 164, 1) 100%
-  );
-  width: 40vw;
-  height: 55vh;
+  top: 140px;
+  right: -180px;
+  background-color: #14FFEC;
+  border-radius: 5px 5px 100px 5px;
+  width: 60%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Wave Background Image */
 .wave {
-  position: relative;
-  top: 210px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust main section for smaller screens */
+  .main {
+    height: auto;
+  }
+
+  /* Adjust box container margin */
+  .boxContainer {
+    margin: 0 20px;
+  }
+
+  /* Adjust paragraph font size */
+  .mainBox p {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  /* Hide right-side content on smaller screens */
+  .mainBoxText {
+    display: none;
+  }
+
+  .rightMainBox {
+    display: none;
+  }
 }

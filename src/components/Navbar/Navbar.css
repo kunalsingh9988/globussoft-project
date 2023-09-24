@@ -1,35 +1,161 @@
+/* Styles for the #navbar container */
+#navbar {
+  max-width: 100vw; /* Ensure the navbar doesn't exceed the viewport width */
+  background-color: #222831;
+  position: relative;
+  z-index: 10;
 
+}
+
+/* Styles for the main navbar container */
 .navbarContainer {
-  width: 100vw;
-  /* background-color: rgb(249, 249, 249); */
-  z-index: 99;
-  
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  gap: 200px;
+  justify-content: space-around;
 }
-.navbarContainer.active{
 
-  backdrop-filter: blur(25px);
-  top: 0px;
-  position: fixed;
+/* Styles for the active (fixed) navbar container */
+
+.navbarContainer.active {
+  min-width: 100vw; /* Expand the navbar to full width */
+  /* backdrop-filter: blur(10px); */
+  background-color: rgba(255, 255, 255, .15);  
+ backdrop-filter: blur(5px);
+  /* background-color: #393E46; */
+  top: 0px; /* Position at the top of the viewport */
+  position: fixed; /* Fix the navbar at the top */
+  z-index: 99;
 }
+
+/* Styles for the left part of the navbar */
 .navLeft {
   cursor: pointer;
-}
-.navLeft img{
-  width: 150px;
-  height: 80px;
-}
-.navRight ul {
-  cursor: pointer;
   display: flex;
-  gap: 30px;
+  align-items: center;
+  width: 150px;
+  height: 70px;
+}
+
+/* Styles for the sidebar menu */
+.sideBar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
 }
 .navRight ul li {
-    font-weight: 300;
-  list-style-type: none;
+  color: #eeeeee;
+  position: relative;
+  cursor: pointer;
 }
-.navRight ul li:hover{
+/* Styles for sidebar list items on hover */
+.sideBar li:hover {
+  color: #8bf9ff; /* Change text color on hover */
+}
+
+/* Styles for the menu bar (hamburger icon) */
+.menuBar {
+  display: none; /* Initially hidden */
+}
+
+/*------ SUBMENU ------ */
+/* Submenu styles */
+.submenu {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00adb5;
+  box-shadow: 1px 1px 25px black;
+  border-radius: 4px;
+  padding: 10px;
+  display: none;
+  z-index: 100;
+}
+
+.navRight ul li:hover .submenu {
+  display: block;
+}
+
+.submenu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.submenu ul li {
+  font-weight: 300;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.submenu ul li:hover {
   color: gray;
+}
+
+/* Responsive styles for screens with a maximum width of 500px */
+@media screen and (max-width: 500px) {
+ 
+  .navLeft {
+    margin-right: 180px;
+  }
+  /* Adjustments for the main navbar container */
+  .navbarContainer {
+    gap: 0;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Styles for the sidebar menu in mobile view */
+  .sideBar {
+    height: 0px;
+    padding: 10px 10px;
+    transform: translateY(-370px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* display: none; */
+    transition: 0.3s ease-in;
+  }
+
+  /* Styles for the active (expanded) mobile sidebar */
+  .sideBar.active {
+    height: 100vh;
+    width: 100vw;
+    gap: 30px;
+    /* backdrop-filter: blur(20px); */
+    transform: translateY(40px);
+    /* display: flex; */
+    transition: 0.3s ease-in;
+  }
+
+  /* Adjust text size for mobile sidebar list items */
+  .sideBar li {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  /* Styles for the menu bar (hamburger icon) in mobile view */
+  .menuBar {
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    top: 25px;
+    right: 40px;
+    display: inline-block;
+  }
+
+  /* Adjust the alignment of the menu icon in mobile view */
+  .menuIcon {
+    color: #eeeeee;
+    float: right;
+  }
 }
